@@ -1,3 +1,3 @@
-include <beatbeam.scad>
+include <rgb-beam.scad>
 
-xBeam(10);
+xBeam(16);

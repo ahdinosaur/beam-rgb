@@ -3,7 +3,7 @@ var createMesh = require('gl-mesh3d')
 var parseStl = require('parse-stl')
 var fs = require('fs')
 
-var stl = fs.readFileSync(__dirname + '/beam.stl')
+var stl = fs.readFileSync(__dirname + '/index.stl')
 var mesh = parseStl(stl)
 
 var scene = createScene()

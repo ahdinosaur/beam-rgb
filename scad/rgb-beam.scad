@@ -18,7 +18,7 @@ include <units.scad>
 $beam_width = mm * 10;
 $grid_width = mm * 50;
 $beam_hole_radius = mm * 2.4;
-$rgb_hole_radius = mm * 2.4;
+$grid_hole_radius = mm * 2.4;
 
 $rgbs_per_grid = 4;
 $mm_per_grid = 50 * mm;
@@ -33,7 +33,7 @@ module zBeam(rgbs) {
     cube([$beam_width, $beam_width, $beam_width * beams]);
 
     for(i = [0 : beams - 1]) {
-      if (i == 0 || i == 1 || i == beams - 2 || i == beams - 3) {
+      if (i == 0 || i == 1 || i == beams - 1 || i == beams - 2) {
         translate([$beam_width / 2, $beam_width + 1, $beam_width * i + $beam_width / 2])
         rotate([90,0,0])
         cylinder(r=$beam_hole_radius, h=$beam_width + 2, $fn=50);
@@ -45,8 +45,8 @@ module zBeam(rgbs) {
     }
 
     for (j = [0 : grids - 1]) {
-      if (i != 0 || i != grids - 1) {
-        translate([0, $grid_width + 1, $grid_width * i + $grid_width / 2])
+      if (j != 0 || j != grids - 1) {
+        translate([$beam_width / 2, $grid_width + 1, $grid_width * j])
         rotate([90,0,0])
         cylinder(r=$grid_hole_radius, h=$grid_width + 2, $fn=50);
       }

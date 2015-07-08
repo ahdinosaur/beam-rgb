@@ -45,7 +45,7 @@ module zBeam(rgbs) {
     }
 
     for (j = [0 : grids - 1]) {
-      if (j != 0 || j != grids - 1) {
+      if (j != 0) {
         translate([$beam_width / 2, $grid_width + 1, $grid_width * j])
         rotate([90,0,0])
         cylinder(r=$grid_hole_radius, h=$grid_width + 2, $fn=50);

@@ -1,6 +1,6 @@
 # beam-rgb
 
-[centimeter beams](https://github.com/ahdinosaur/beatbeam) for rgb-123's rgb led grids.
+[centimeter beams](http://gridbeamers.com/) for rgb-123's rgb led grids.
 
 see the demo: <http://dinosaur.is/beam-rgb>
 

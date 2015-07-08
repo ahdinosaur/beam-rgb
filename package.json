@@ -1,0 +1,50 @@
+{
+  "name": "beam-rgb",
+  "version": "1.0.0",
+  "description": "centimeter beams for rgb-123's rgb led grids",
+  "main": "index.js",
+  "scripts": {
+    "start": "(rerun-script & budo index.js --serve bundle.js)",
+    "build-js": "browserify index.js -o bundle.js",
+    "build-scad": "openscad scad/index.scad -o index.stl",
+    "deploy": "gh-pages -d ."
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  },
+  "watches": {
+    "build-scad": ["scad/*.scad"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahdinosaur/beam-rgb.git"
+  },
+  "keywords": [
+    "beam",
+    "bitbeam",
+    "gridbeam",
+    "rgb",
+    "rgb-123"
+  ],
+  "author": "ahdinosaur",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ahdinosaur/beam-rgb/issues"
+  },
+  "homepage": "https://github.com/ahdinosaur/beam-rgb#readme",
+  "dependencies": {
+    "gl-mesh3d": "^1.0.5",
+    "gl-plot3d": "^1.4.1",
+    "parse-stl": "^1.0.2"
+  },
+  "devDependencies": {
+    "brfs": "^1.4.0",
+    "browserify": "^10.2.4",
+    "budo": "^4.1.0",
+    "gh-pages": "^0.3.1",
+    "rerun-script": "^0.6.0",
+    "watchify": "^3.2.3"
+  }
+}

@@ -1,0 +1,25 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/michael/.nvm/versions/io.js/v2.3.1/bin/iojs',
+1 verbose cli   '/home/michael/.nvm/versions/io.js/v2.3.1/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'gh-pages' ]
+2 info using npm@2.11.3
+3 info using node@v2.3.1
+4 verbose stack Error: missing script: gh-pages
+4 verbose stack     at run (/home/michael/.nvm/versions/io.js/v2.3.1/lib/node_modules/npm/lib/run-script.js:142:19)
+4 verbose stack     at /home/michael/.nvm/versions/io.js/v2.3.1/lib/node_modules/npm/lib/run-script.js:58:5
+4 verbose stack     at /home/michael/.nvm/versions/io.js/v2.3.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:345:5
+4 verbose stack     at checkBinReferences_ (/home/michael/.nvm/versions/io.js/v2.3.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:309:45)
+4 verbose stack     at final (/home/michael/.nvm/versions/io.js/v2.3.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:343:3)
+4 verbose stack     at then (/home/michael/.nvm/versions/io.js/v2.3.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:113:5)
+4 verbose stack     at /home/michael/.nvm/versions/io.js/v2.3.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:300:12
+4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (evalmachine.<anonymous>:380:3)
+5 verbose cwd /home/michael/repos/ahdinosaur/beam-rgb
+6 error Linux 4.0.0-2-amd64
+7 error argv "/home/michael/.nvm/versions/io.js/v2.3.1/bin/iojs" "/home/michael/.nvm/versions/io.js/v2.3.1/bin/npm" "run" "gh-pages"
+8 error node v2.3.1
+9 error npm  v2.11.3
+10 error missing script: gh-pages
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]

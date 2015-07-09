@@ -1,10 +1,10 @@
 {
   "name": "beam-rgb",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "centimeter beams for rgb-123's rgb led grids",
   "main": "index.js",
   "scripts": {
-    "start": "(rerun-script & budo index.js --serve bundle.js)",
+    "start": "(rerun-script & budo index.js --serve bundle.js --live)",
     "build-js": "browserify index.js -o bundle.js",
     "build-scad": "openscad scad/index.scad -o index.stl",
     "deploy": "gh-pages -d ."

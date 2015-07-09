@@ -7,7 +7,9 @@
     "start": "(rerun-script & budo index.js --serve bundle.js --live)",
     "build-js": "browserify index.js -o bundle.js",
     "build-scad": "openscad scad/index.scad -o index.stl",
-    "deploy": "gh-pages -d ."
+    "build": "npm run build-scad && npm run build-js",
+    "push": "gh-pages -d .",
+    "deploy": "npm run build && npm run push"
   },
   "browserify": {
     "transform": [

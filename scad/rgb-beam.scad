@@ -49,6 +49,10 @@ module zBeam(rgbs) {
         translate([-1, $beam_width / 2, $beam_width * i + $beam_width / 2])
         rotate([0,90,0])
         cylinder(r=$beam_hole_radius, h=$beam_width + 2, $fn=50);
+
+        translate([-epsilon, $beam_width / 2, $beam_width * i + $beam_width / 2])
+        rotate([0,90,0])
+        nutHole(size=$nut_size);
       }
     }
 

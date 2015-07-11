@@ -3,3 +3,4 @@ npm-debug.log
 
 *.stl
 bundle.js
+browserify-cache.json

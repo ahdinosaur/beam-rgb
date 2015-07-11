@@ -22,7 +22,7 @@ npm install
 npm start
 ```
 
-browse to <http://localhost:9966/> to see the current model.
+browse to <http://localhost:8000/> to see the current model.
 
 edit scad/*.scad to edit the model.
 

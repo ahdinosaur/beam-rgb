@@ -4,8 +4,8 @@
   "description": "centimeter beams for rgb-123's rgb led grids",
   "main": "index.js",
   "scripts": {
-    "start": "(rerun-script & budo index.js --serve bundle.js --live)",
-    "build-js": "browserify index.js -o bundle.js",
+    "start": "(rerun-script & ecstatic-lr | wtch bundle.js)",
+    "build-js": "browserifyinc index.js -o bundle.js",
     "build-scad": "openscad scad/index.scad -o index.stl",
     "build": "npm run build-scad && npm run build-js",
     "push": "gh-pages -d .",
@@ -17,7 +17,14 @@
     ]
   },
   "watches": {
-    "build-scad": ["scad/*.scad"]
+    "build-js": [
+      "index.js",
+      "js/*.js",
+      "index.stl"
+    ],
+    "build-scad": [
+      "scad/*.scad"
+    ]
   },
   "repository": {
     "type": "git",
@@ -43,10 +50,10 @@
   },
   "devDependencies": {
     "brfs": "^1.4.0",
-    "browserify": "^10.2.4",
-    "budo": "^4.1.0",
+    "browserify-incremental": "^3.0.1",
+    "ecstatic-lr": "^1.0.0",
     "gh-pages": "^0.3.1",
     "rerun-script": "^0.6.0",
-    "watchify": "^3.2.3"
+    "wtch": "^3.2.1"
   }
 }
